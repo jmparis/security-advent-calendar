@@ -1,0 +1,3 @@
+# Dependencies for HOHOH-OTP project
+pytest>=9.0.0
+
