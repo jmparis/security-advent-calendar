@@ -3,13 +3,19 @@ from math import floor
 import base64 # To convert the secret into the 20 random bytes
 import hmac # Provides the HMAC algorithm
 import hashlib # Provides the SHA1 algorithm
+import argparse # To parse command-line arguments
+from datetime import datetime, timezone
 
 # By default, use a 30-seconds time window
 VALIDITY_DURATION = 30
 
-def generate_counter_value ():
-  """Generates the counter-value for the TOTP algorithm's hash generator."""
-  timestamp = time.time() # Gets current time as a float (= with microseconds)
+def generate_counter_value (custom_timestamp: float = None):
+  """Generates the counter-value for the TOTP algorithm's hash generator.
+  If custom_timestamp is provided, it will be used instead of the current time."""
+  if custom_timestamp is not None:
+    timestamp = custom_timestamp
+  else:
+    timestamp = time.time() # Gets current time as a float (= with microseconds)
   timestamp = floor(timestamp) # Turn it into an integer (= only seconds)
   # Doing the following ensures that the value increments by one every 30
   # seconds
@@ -71,11 +77,12 @@ VALID_END = 2 # Allow 2 time steps in the future to be considered valid
 def generate_totp_tokens (
     key: str,
     timestep_start = VALID_START,
-    timestep_end = VALID_END
+    timestep_end = VALID_END,
+    custom_timestamp: float = None
 ):
   """Generates a list of valid tokens within the valid window provided."""
   tokens: list[str] = []
-  counter_value = generate_counter_value()
+  counter_value = generate_counter_value(custom_timestamp)
 
   for timestep in range(timestep_start, timestep_end + 1):
     hm = generate_hash(key, counter_value + timestep)
@@ -88,9 +95,51 @@ def generate_totp_tokens (
 
 # Press the green button in the gutter to run the script.
 if __name__ == "__main__":
+  parser = argparse.ArgumentParser(description="TOTP Token Generator/Validator")
+  parser.add_argument(
+    "--time", "-t",
+    type=str,
+    help="Date and time to use for TOTP calculation (format: YYYY-MM-DD HH:MM:SS or HH:MM:SS). Uses current time if not specified.",
+    default=None
+  )
+  parser.add_argument(
+    "--utc", "-u",
+    action="store_true",
+    help="Utiliser l'heure UTC pour le calcul du TOTP."
+  )
+  args = parser.parse_args()
+
+  custom_timestamp = None
+  if args.time:
+    try:
+      # Try to parse full date and time first
+      try:
+        custom_datetime = datetime.strptime(args.time, "%Y-%m-%d %H:%M:%S")
+      except ValueError:
+        # Fall back to time only, combined with today's date
+        time_parts = datetime.strptime(args.time, "%H:%M:%S").time()
+        today = datetime.now().date()
+        custom_datetime = datetime.combine(today, time_parts)
+      # Si l'option --utc est passée, forcer en UTC
+      if args.utc:
+        custom_datetime = custom_datetime.replace(tzinfo=timezone.utc)
+      custom_timestamp = custom_datetime.timestamp()
+      print(f"Using custom time: {custom_datetime} ({int(custom_timestamp)} seconds)")
+    except ValueError:
+      print("Invalid format. Please use YYYY-MM-DD HH:MM:SS or HH:MM:SS (e.g., 2025-12-04 14:30:00 or 14:30:00)")
+      exit(1)
+  else:
+    if args.utc:
+      current_time = datetime.now(timezone.utc)
+    else:
+      current_time = datetime.now()
+    print(f"Using current time: {current_time} ({int(current_time.timestamp())} seconds)")
+
   secret = "F5TGYYLHNFZW433UNBSXEZJP"
+  valid_tokens = generate_totp_tokens(secret, custom_timestamp=custom_timestamp)
+  print(f"Valid tokens: {valid_tokens}")
+
   client_token = input("Enter TOTP code from device (Ctrl+C to abort): ")
-  valid_tokens = generate_totp_tokens(secret)
 
   if client_token in valid_tokens:
     print("Token is valid!")
