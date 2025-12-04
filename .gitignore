@@ -1,0 +1,26 @@
+# Ignorer les environnements virtuels Python
+venv/
+.env/
+ENV/
+
+# Ignorer les fichiers et dossiers JetBrains (PyCharm, etc.)
+.idea/
+*.iml
+
+# Ignorer les fichiers VSCode
+.vscode/
+
+# Ignorer les fichiers système
+.DS_Store
+Thumbs.db
+
+# Ignorer les fichiers Python compilés
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorer les logs et fichiers temporaires
+*.log
+*.tmp
+
