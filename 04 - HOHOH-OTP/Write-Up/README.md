@@ -14,6 +14,11 @@ On charge l'image du challenge qui contient un QR code.
 
 On récupère le secret : `F5TGYYLHNFZW433UNBSXEZJP`
 
+Après un petit décodage avec [CyberChef](https://cyberchef.org/#recipe=From_Base32('A-Z2-7%3D',true)To_Base32('A-Z2-7%3D'/breakpoint)&input=RjVUR1lZTEhORlpXNDMzVU5CU1hFWkpQ).
+
+Le secret est en fait la chaine de caractères : **/flagisnothere/**
+
+
 ## Chaque seconde compte !
 Il est montré que le temps s'est arrêté au 24 décembre 21h25:00 à Rovaniemi, en Finlande.
 Cette ville est située à **UTC+2h**.
@@ -24,6 +29,7 @@ Il faut maintenant [convertir](https://www.epochconverter.com/) ce temps en seco
 
 On récupère le timestamp : `1766604300`
 
+
 ## Exécution du programme
 On lance le projet avec en argument le temps figé du challenge : `main.py --time 2025-12-24 19:25:00 --utc`
 
@@ -32,6 +38,7 @@ On lance le projet avec en argument le temps figé du challenge : `main.py --tim
 Seule, la valeur centrale du range obtenu est valide. 
 
 On va donc utiliser le code central obtenu pour s'authentifier : **201734**
+
 
 ## Récupération du flag
 Une fois, le code OTP **201734** saisi sur le site, on obtient le flag : **ADV{6P5_15_UN10CK3D!}**
