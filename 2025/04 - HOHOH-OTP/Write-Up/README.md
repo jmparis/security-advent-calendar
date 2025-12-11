@@ -10,7 +10,7 @@ Comme suggérer, on va copier tous les snippets de code Python. Et on obtient un
 Il existe un [décodeur](https://www.token2.com/site/page/totp-qr-image-decoder) de QR code pour les codes TOTP en ligne.
 On va donc l'utiliser pour extraire le secret (séquence de 20 octets) du QR code.
 On charge l'image du challenge qui contient un QR code.
-![1. Décodage du QR Code.png](images/1.%20D%C3%A9codage%20du%20QR%20Code.png)
+![1. Décodage du QR Code.png](images/1. Décodage du QR Code.png)
 
 On récupère le secret : `F5TGYYLHNFZW433UNBSXEZJP`
 
@@ -25,7 +25,7 @@ Cette ville est située à **UTC+2h**.
 
 Il faut donc obtenir le temps en UTC. Le temps UTC est le 24 décembre 19h25:00.
 Il faut maintenant [convertir](https://www.epochconverter.com/) ce temps en secondes.
-![2. Epoch - Nbre de secondes à Rovaniemi.png](images/2.%20Epoch%20-%20Nbre%20de%20secondes%20%C3%A0%20Rovaniemi.png)
+![2. Epoch - Nbre de secondes à Rovaniemi.png](images/2. Epoch - Nbre de secondes à Rovaniemi.png)
 
 On récupère le timestamp : `1766604300`
 
