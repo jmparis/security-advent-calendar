@@ -92,3 +92,17 @@ Projet : **https://github.com/RsaCtfTool/RsaCtfTool**
 ```bash
 RsaCtfTool -n 538544432877706791637697464048120022166488857246411543807627620220620112343 -e 65537 --private --decryptfile ./cipher.bin
 ```
+
+
+5. Comment “prouver” à Santa que sa clé est mauvaise
+Dans ton explication (ou writeup), tu peux dire :
+- La clé publique fournie est une clé RSA au format standard.
+- Sa taille (XXX bits) est beaucoup trop faible pour être sécurisée.
+- On peut factoriser le modulus n en p et q.
+- Grâce à ça, on peut recalculer la clé privée, ce qui ne devrait jamais être possible dans un vrai système RSA correctement dimensionné.
+- En utilisant cette clé privée, on déchiffre le message et on retrouve le flag ADV{...}.
+Si tu veux, tu peux me coller la sortie exacte de :
+openssl rsa -pubin -in pub.pem -text -noout
+
+
+
