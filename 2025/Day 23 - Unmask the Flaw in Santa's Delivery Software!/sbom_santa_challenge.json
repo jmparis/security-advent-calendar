@@ -1,0 +1,684 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:9e4a6b2c-8f1d-4c3b-9a2e-0d1f2a3b4c5d",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-11-21T12:00:00Z",
+    "tools": [
+      {
+        "name": "sbom-generator-demo",
+        "version": "6.0.0"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Atelier Père Noël"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "application",
+      "bom-ref": "pkg:cargo/sapin-app@2.0.0",
+      "name": "sapin-app",
+      "version": "2.0.0",
+      "purl": "pkg:cargo/sapin-app@2.0.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "atelier-core"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-20T08:30:00Z"
+        },
+        {
+          "name": "org.santa.notes",
+          "value": "main frontend"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://example.com/projects/sapin-app"
+        },
+        {
+          "type": "vcs",
+          "url": "https://git.example.com/atelier/sapin-app"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/cadeau-orchestration@1.3.0",
+      "name": "cadeau-orchestration",
+      "version": "1.3.0",
+      "purl": "pkg:cargo/cadeau-orchestration@1.3.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "orchestration-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-19T10:00:00Z"
+        },
+        {
+          "name": "org.santa.playbook",
+          "value": "orchestrate-v2"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://example.com/projects/cadeau-orchestration"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/packaging-coordinator@1.0.0",
+      "name": "packaging-coordinator",
+      "version": "1.0.0",
+      "purl": "pkg:cargo/packaging-coordinator@1.0.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "packaging-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-18T09:12:00Z"
+        },
+        {
+          "name": "org.santa.tag",
+          "value": "coord-v1"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://packages.example.com/packaging-coordinator/1.0.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/wrapper-lib@0.6.0",
+      "name": "wrapper-lib",
+      "version": "0.6.0",
+      "purl": "pkg:cargo/wrapper-lib@0.6.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "packaging-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-17T07:00:00Z"
+        },
+        {
+          "name": "org.santa.abi",
+          "value": "stable"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://example.com/projects/wrapper-lib"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/box-core@0.8.0",
+      "name": "box-core",
+      "version": "0.8.0",
+      "purl": "pkg:cargo/box-core@0.8.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "materials-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-16T06:45:00Z"
+        },
+        {
+          "name": "org.santa.warranty",
+          "value": "none"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "other",
+          "url": "https://docs.example.com/box-core/design"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/ribbon-helpers@2.0.0",
+      "name": "ribbon-helpers",
+      "version": "2.0.0",
+      "purl": "pkg:cargo/ribbon-helpers@2.0.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "decor-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-15T11:22:00Z"
+        },
+        {
+          "name": "org.santa.quality",
+          "value": "A"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://example.com/projects/ribbon-helpers"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/tie-core@0.7.0",
+      "name": "tie-core",
+      "version": "0.7.0",
+      "purl": "pkg:cargo/tie-core@0.7.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "decor-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-14T13:33:00Z"
+        },
+        {
+          "name": "org.santa.flags",
+          "value": "legacy=false"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://git.example.com/atelier/tie-core"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/naughty-list-checker@0.9.0",
+      "name": "naughty-list-checker",
+      "version": "0.9.0",
+      "purl": "pkg:cargo/naughty-list-checker@0.9.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "rules-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-13T16:00:00Z"
+        },
+        {
+          "name": "org.santa.policy",
+          "value": "strict"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://example.com/projects/naughty-list-checker"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/punishment-engine@1.2.1",
+      "name": "punishment-engine",
+      "version": "1.2.1",
+      "purl": "pkg:cargo/punishment-engine@1.2.1",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "rules-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-12T05:05:00Z"
+        },
+        {
+          "name": "org.santa.strategy",
+          "value": "tiered"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://packages.example.com/punishment-engine/1.2.1"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/father-frost-strap@0.1.2",
+      "name": "father-frost-strap",
+      "version": "0.1.2",
+      "purl": "pkg:cargo/father-frost-strap@0.1.2",
+      "properties": [
+        {
+          "name": "org.santa.metadata",
+          "value": "owner=rules;build=2025-11-11T03:03:03Z;base58:KkYWdtT6Nh5epg9sS2w5JAu8pG;internal=1"
+        },
+        {
+          "name": "org.santa.integrity",
+          "value": "sha256:d5bbb251bce03bf27c9de4d183039fcdc1c82906b5a1d40e8a1aef9dc9460527"
+        },
+        {
+          "name": "org.santa.notes",
+          "value": "low-level attach logic"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://example.com/projects/father-frost-strap"
+        },
+        {
+          "type": "package-manager",
+          "url": "https://crates.example.com/father-frost-strap/0.1.2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/sledge-engine@5.0.0",
+      "name": "sledge-engine",
+      "version": "5.0.0",
+      "purl": "pkg:cargo/sledge-engine@5.0.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "flight-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-10T02:20:00Z"
+        },
+        {
+          "name": "org.santa.telemetry",
+          "value": "enabled"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://git.example.com/atelier/sledge-engine"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/reindeer-nav@3.0.0",
+      "name": "reindeer-nav",
+      "version": "3.0.0",
+      "purl": "pkg:cargo/reindeer-nav@3.0.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "flight-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-09T01:11:00Z"
+        },
+        {
+          "name": "org.santa.gps",
+          "value": "v2"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://example.com/projects/reindeer-nav"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/hot-chocolat-lib@0.5.0",
+      "name": "hot-chocolat-lib",
+      "version": "0.5.0",
+      "purl": "pkg:cargo/hot-chocolat-lib@0.5.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "wellbeing-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-08T00:59:00Z"
+        },
+        {
+          "name": "org.santa.serving",
+          "value": "hot"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "other",
+          "url": "https://docs.example.com/hot-chocolat-lib/usage"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/cadeau-lib@4.0.0",
+      "name": "cadeau-lib",
+      "version": "4.0.0",
+      "purl": "pkg:cargo/cadeau-lib@4.0.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "gifts-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-07T21:00:00Z"
+        },
+        {
+          "name": "org.santa.compat",
+          "value": ">=4.0"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://example.com/projects/cadeau-lib"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/atelier-packaging@2.0.0",
+      "name": "atelier-packaging",
+      "version": "2.0.0",
+      "purl": "pkg:cargo/atelier-packaging@2.0.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "packaging-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-06T18:18:00Z"
+        },
+        {
+          "name": "org.santa.module",
+          "value": "wrap"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://example.com/projects/atelier-packaging"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/ruban-lib@1.5.0",
+      "name": "ruban-lib",
+      "version": "1.5.0",
+      "purl": "pkg:cargo/ruban-lib@1.5.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "decor-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-05T14:14:00Z"
+        },
+        {
+          "name": "org.santa.variants",
+          "value": "multi"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "package-manager",
+          "url": "https://crates.example.com/ruban-lib/1.5.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/gifting-analytics@0.4.0",
+      "name": "gifting-analytics",
+      "version": "0.4.0",
+      "purl": "pkg:cargo/gifting-analytics@0.4.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "analytics-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-04T12:00:00Z"
+        },
+        {
+          "name": "org.santa.telemetry",
+          "value": "opt-in"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://example.com/projects/gifting-analytics"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/logger-factory@1.3.0",
+      "name": "logger-factory",
+      "version": "1.3.0",
+      "purl": "pkg:cargo/logger-factory@1.3.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "infra-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-03T09:09:00Z"
+        },
+        {
+          "name": "org.santa.privacy",
+          "value": "redact"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://git.example.com/atelier/logger-factory"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/monitoring@0.3.0",
+      "name": "monitoring",
+      "version": "0.3.0",
+      "purl": "pkg:cargo/monitoring@0.3.0",
+      "properties": [
+        {
+          "name": "org.santa.owner",
+          "value": "infra-team"
+        },
+        {
+          "name": "org.santa.build",
+          "value": "2025-11-02T08:08:00Z"
+        },
+        {
+          "name": "org.santa.alerts",
+          "value": "enabled"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://example.com/projects/monitoring"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:cargo/sapin-app@2.0.0",
+      "dependsOn": [
+        "pkg:cargo/cadeau-orchestration@1.3.0",
+        "pkg:cargo/sledge-engine@5.0.0",
+        "pkg:cargo/gifting-analytics@0.4.0",
+        "pkg:cargo/monitoring@0.3.0"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/cadeau-orchestration@1.3.0",
+      "dependsOn": [
+        "pkg:cargo/packaging-coordinator@1.0.0",
+        "pkg:cargo/cadeau-lib@4.0.0"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/packaging-coordinator@1.0.0",
+      "dependsOn": [
+        "pkg:cargo/wrapper-lib@0.6.0"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/wrapper-lib@0.6.0",
+      "dependsOn": [
+        "pkg:cargo/box-core@0.8.0"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/box-core@0.8.0",
+      "dependsOn": [
+        "pkg:cargo/ribbon-helpers@2.0.0"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/ribbon-helpers@2.0.0",
+      "dependsOn": [
+        "pkg:cargo/tie-core@0.7.0"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/tie-core@0.7.0",
+      "dependsOn": [
+        "pkg:cargo/naughty-list-checker@0.9.0"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/naughty-list-checker@0.9.0",
+      "dependsOn": [
+        "pkg:cargo/punishment-engine@1.2.1"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/punishment-engine@1.2.1",
+      "dependsOn": [
+        "pkg:cargo/father-frost-strap@0.1.2"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/father-frost-strap@0.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:cargo/sledge-engine@5.0.0",
+      "dependsOn": [
+        "pkg:cargo/reindeer-nav@3.0.0",
+        "pkg:cargo/hot-chocolat-lib@0.5.0"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/reindeer-nav@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:cargo/hot-chocolat-lib@0.5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:cargo/gifting-analytics@0.4.0",
+      "dependsOn": [
+        "pkg:cargo/logger-factory@1.3.0"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/logger-factory@1.3.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:cargo/cadeau-lib@4.0.0",
+      "dependsOn": [
+        "pkg:cargo/atelier-packaging@2.0.0",
+        "pkg:cargo/ruban-lib@1.5.0"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/atelier-packaging@2.0.0",
+      "dependsOn": [
+        "pkg:cargo/ruban-lib@1.5.0"
+      ]
+    },
+    {
+      "ref": "pkg:cargo/ruban-lib@1.5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:cargo/monitoring@0.3.0",
+      "dependsOn": [
+        "pkg:cargo/logger-factory@1.3.0"
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "bom-ref": "vuln-2025-0005",
+      "id": "VEX-2025-0005",
+      "source": {
+        "name": "Santa Workshop VEX",
+        "url": "https://example.com/vex/father-frost-vex-limited.json"
+      },
+      "ratings": [
+        {
+          "method": "CVSSv3.1",
+          "score": 7.8,
+          "severity": "HIGH"
+        }
+      ],
+      "description": "Vulnérabilité confirmée affectant uniquement le composant father-frost-strap version 0.1.2.",
+      "affects": [
+        {
+          "ref": "pkg:cargo/father-frost-strap@0.1.2"
+        }
+      ],
+      "advisories": [
+        {
+          "url": "https://example.com/advisories/father-frost-strap-0.1.2",
+          "title": "Avis de sécurité : father-frost-strap 0.1.2"
+        }
+      ]
+    }
+  ]
+}
