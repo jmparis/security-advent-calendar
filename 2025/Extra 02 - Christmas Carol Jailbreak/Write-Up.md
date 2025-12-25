@@ -195,24 +195,27 @@ bWhgeQ== --> Base64 --> `mh`y`
 
 
 📊 Tableau récapitulatif des fragments
-1. Fragments bruts (SYS)
-| Index | Fragment | 
-| --- | --- |  | 
-| 00 | [SYS: 00:QURWe1k=] | 
-| 01 | [SYS: 01:bnTAc2Q=] | 
-| 02 | [SYS: 02:TGN3ZWo=] | 
-| 03 | [SYS: 03:d3pAaw==] | 
-| 04 | [SYS: 04:bWhgeQ==] | 
+1. Fragments bruts (SYS) 
+
+| Index | Carol title                | Fragment           | 
+|-------|----------------------------|--------------------| 
+| 00    | Dzisiaj w Betlejem         | [SYS: 00:QURWe1k=] | 
+| 01    | El Tamborilero             | [SYS: 01:bnTAc2Q=] | 
+| 02    | Vinde Adoremos             | [SYS: 02:TGN3ZWo=] | 
+| 03    | Komt Allen Tezamen         | [SYS: 03:d3pAaw==] | 
+| 04    | Moș Crăciun Cu Plete Dalbe | [SYS: 04:bWhgeQ==] | 
 
 
 
 2. Décodage Base64
-| Index | Base64 | Décodé | 
-| 00 | QURWe1k= | ADV{Y | 
-| 01 | bnTAc2Q= | nt"sd | 
-| 02 | TGN3ZWo= | Lczje | 
-| 03 | d3pAaw== | zw"k | 
-| 04 | bWhgeQ== | ,hy | 
+
+| Index | Base64 | Décodé |
+|-------| ------ | ------ |
+| 00    | QURWe1k= | ADV{Y | 
+| 01    | bnTAc2Q= | nt"sd | 
+| 02    | TGN3ZWo= | Lczje | 
+| 03    | d3pAaw== | zw"k | 
+| 04    | bWhgeQ== | ,hy | 
 
 
 (Note : j’ai corrigé la petite coquille dans le fragment 01, qui contient bien " après remappage.)
